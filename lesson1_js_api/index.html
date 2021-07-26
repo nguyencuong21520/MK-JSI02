@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson1</title>
+    <style>
+        .the_weather_container{
+            width: 400px;
+            height: 500px;
+            margin: auto;
+            padding:20px;
+            text-align: center;
+            box-shadow: 5px 5px  15px rgba(0,0,0,0.5);
+            background: linear-gradient(to top, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+            border-radius: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .the_weather_container .show img{
+            width: 200px;
+        }
+        .the_weather_container .show h1{
+            font-size: 40px;
+        }
+        .the_weather_container p:nth-child(4){
+       
+            font-size: 30px;
+        }
+        #inputCityName{
+            margin-top: 30px;
+        }
+        #inputCityName input, #inputCityName button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 16px;
+            transition: 0.5s;
+        }
+        #inputCityName button:hover{
+            background-color: white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align:center;">The Weather</h1>
+
+    <div class="the_weather_container">
+        <div class="show">
+            <img src="https://openweathermap.org/img/wn/03n@2x.png" alt="">
+            <h1>32*C</h1>
+            <hr>
+            <p>Ha noi</p>
+            <p>Nhieu May</p>
+        </div>
+
+        <form id="inputCityName">
+            <input type="text">
+            <button>Submit</button>
+        </form>
+
+    </div>
+
+    
+    <script src="./main.js"></script>
+</body>
+</html>
