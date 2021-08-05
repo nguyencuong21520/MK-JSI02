@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let student = [
+        {
+          name: "NVA",
+          age: 16,
+          course: ["mindX 01", "mindX 02", "mindX 03"],
+        },
+        {
+          name: "NVB",
+          age: 18,
+          course: ["mindX 01", "mindX 02", "mindX 04"],
+        },
+        {
+          name: "NVC",
+          age: 17,
+          course: ["mindX 01", "mindX 03", "mindX 04"],
+        },
+        {
+          name: "NVD",
+          age: 15,
+          course: ["mindX 01", "mindX 02", "mindX 03"],
+        },
+      ];
+
+
+
+        // let key = prompt("nhap")
+        // for(let i of student){
+        //   if(i.age == key){
+        //     console.log(i.name)
+        //   }else{
+        //     console.log("not found");
+        //   }
+        // }
+
+
+
+      let arr1 = [0, 2, 4, 6, 8,9,10];
+      let arr2 = [1, 3, 5, 7];
+
+      let cau1 = (data) => {
+        let key = prompt("Độ tuổi cần tìm?");
+        let result = [];
+        data.forEach((e) => {
+          if (e.age == key) {
+            result.push(e.name);
+          }
+        });
+        if (result.length > 0) {
+          result.forEach((e) => {
+            console.log(e);
+          });
+        } else {
+          console.log("not found");
+        }
+      };
+
+      let cau2 = (data) => {
+        let key = prompt("Khoá học cần tìm?");
+        let result = [];
+        data.forEach((e) => {
+          if (e.course.includes(key)) {
+            result.push(e.name);
+          }
+        });
+        if (result.length > 0) {
+          result.forEach((e) => {
+            console.log(e);
+          });
+        } else {
+          console.log("not found");
+        }
+      };
+
+      let cau3 = (arr1, arr2)=>{
+          let result = [];
+          if(arr1.length > arr2.length) {
+              for(let i=0; i<arr1.length; i++) {
+                  if(arr2[i]){
+                      result.push(arr1[i])
+                      result.push(arr2[i])
+                  }else{
+                    result.push(arr1[i])
+                  }
+              }
+          }
+          return result
+      }
+
+
+//       const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+
+// const numbers = [15.5, 2.3, 1.1, 4.7];
+
+// function getSum(total, num) { 
+//   console.log(total)
+// }
+
+
+
+    </script>
+  </body>
+</html>

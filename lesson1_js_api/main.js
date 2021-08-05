@@ -59,8 +59,28 @@ let getDataAPI = async (city)=>{
     let preData = await fetch(api) //get data form api
     let data = await preData.json() //lọc ra dữ liệu cần dùng
 
-    console.log(data);
+    renderData(data)
 }
 
-getDataAPI("thailand")
-getDataAPI("hanoi")
+let renderData = (data)=>{
+    let dom = document.querySelector(".show")
+    // let tempK = data.main.temp
+    // let tempC = parseInt(tempK - 273)
+    let html = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+    <h1>${parseInt(data.main.temp - 273)}</h1>
+    <hr>
+    <p>${data.name}</p>
+    <p>${data.weather[0].description}</p>`
+    dom.innerHTML = html
+}
+
+let form = document.querySelector("#inputCityName")
+form.onsubmit = (e)=>{
+    e.preventDefault()
+    let city = form.city.value
+    getDataAPI(city)
+}
+
+
+
+
