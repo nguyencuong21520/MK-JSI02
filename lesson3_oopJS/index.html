@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="app">
+        <span id="a">00:00</span>
+        <button onclick="updateTime()">Start</button>
+        <button onclick="stop()">Stop</button>
+    </div>
+
+    <script>
+        var m = 0;
+        var s = 0;
+        var u = null
+        let time = document.getElementById("a")
+
+        let setTime=()=>{
+            let ss = 0
+            let mm = 0
+
+            if(m<10){
+                mm = "0" + m
+            }else{
+                mm = m
+            }
+            if(s<10){
+                ss = "0" + s
+            }else{
+                ss = s
+            }
+            s++;
+            if(s>59){
+                m++
+                s = 0
+            }
+            time.innerHTML = mm +":" + ss
+        }
+        let updateTime = ()=>{
+            u = setInterval(setTime ,1000)
+
+        }
+        let stop = ()=>{
+            clearInterval(u)
+            time.innerHTML = "00:00"
+        }
+    </script>
+    <script src="./index.js"></script>
+</body>
+</html>

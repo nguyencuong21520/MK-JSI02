@@ -1,0 +1,40 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    background-origin: padding-box;
+    font-family: sans-serif;
+}
+.input_group{
+    margin: 10px 0px;
+}
+.input_group input{
+    padding:5px 10px;
+    margin:3px 0px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 100%;
+}
+.input_group.has-error input{
+    border: 1px solid red;
+    color: red;
+    outline: red;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-screen{
+    height:100vh;
+}
+.f-column{
+    flex-direction: column;
+}
+
+.error-msg{
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}

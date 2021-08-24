@@ -109,16 +109,41 @@
 // console.log(a("i"));
 
 
-let a = prompt("nhap a")
-let b = prompt("nhap b")
-let c = prompt("nhap c")
+// let a = prompt("nhap a")
+// let b = prompt("nhap b")
+// let c = prompt("nhap c")
 
-let max = a
-if(max<b){
-    max = b
-}
-if(max<c){
-    max = c
-}
+// let max = a
+// if(max<b){
+//     max = b
+// }
+// if(max<c){
+//     max = c
+// }
 
-console.log(max);
+// console.log(max);
+
+// const arr = ["hello", "bye", "world", "gia bao"];
+
+// let re = arr.map((e)=>{
+//     return e.slice(0,3)
+// })
+
+// console.log(re);
+
+// let arr = [5,8,5,6,1,4]
+
+
+// for(let i = 0; i<arr.length; i++){
+//     let temp = 0
+//     for(let j  = i+1; j<arr.length; j++){
+//         if(arr[j]<arr[i]){
+//             temp = arr[j]
+//             arr[j] = arr[i]
+//             arr[i] = temp
+//         }
+//     }
+// }
+
+// console.log(arr);
+
