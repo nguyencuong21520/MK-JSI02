@@ -11,6 +11,7 @@ class InputGroup {
         this.$input = document.createElement("input");
         this.$input.type = type;
         this.$input.name = name;
+        this.$input.required = true;
         this.$input.placeholder = placeholder;
 
         this.$label = document.createElement("label");
@@ -31,7 +32,6 @@ class InputGroup {
             this.$container.classList.remove("has-error")
         }
     }
-
     render(){
         this.$label.appendChild(this.$input);
         this.$container.appendChild(this.$label)

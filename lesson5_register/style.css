@@ -38,3 +38,9 @@ body{
 .f-column{
     flex-direction:column
 }
+.btn_link{
+    color: blue;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+}

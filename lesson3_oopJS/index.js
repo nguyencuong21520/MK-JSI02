@@ -26,13 +26,17 @@ class Car{
   honk(){
     console.log(`Đây là tiếng bô của xe ${this.name}`);
   }
-
 }
 
 // let car1 = new Car("lamborghini Aventador", 200,2, "Lamborghini");
 // car1.start();
-
 let car2 = new Car("Fadil", 100,4, "VinFast");
+let car3 = new Car("Huracan", 200, 2, "lamborghini")
+
+car2.start()
+car3.start()
+
+
 //tính kế thừa
 class SupperCar extends Car{
   // k cần khởi tạo vẫn dùng được

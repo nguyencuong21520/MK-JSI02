@@ -1,6 +1,15 @@
-import {Register} from "./componentts/register.js";
+import { setScreen } from "./app.js";
+import { Login } from "./componentts/signin.js";
+import { Chat } from "./componentts/chat.js";
 
-const app = document.getElementById("app")
 
-const register = new Register();
-app.appendChild(register.render());
+
+const login = new Login();
+setScreen(login);
+
+// firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     const chat = new Chat();
+//     setScreen(chat);
+//   }else{}
+// });

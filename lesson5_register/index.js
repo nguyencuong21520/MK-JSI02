@@ -1,6 +1,7 @@
-import { Register } from "./components/register.js";
+import { Login } from "./components/signin.js";
+import { setScreen } from "./app.js";
 
-const app = document.getElementById("app");
 
-const register = new Register()
-app.appendChild(register.render());
+const login = new Login();
+setScreen(login);
+
