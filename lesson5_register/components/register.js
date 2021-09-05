@@ -1,7 +1,7 @@
 import { InputGroup } from "./inputGroup.js";
 import { Login } from "./signin.js";
 import { setScreen } from "../app.js";
-// import { sweetAlert } from "./b.js";
+import { sweetAlert } from "./b.js";
 class Register {
   $container;
   $formRegister;
@@ -100,13 +100,12 @@ class Register {
           displayName: name,
         });
         firebase.auth().currentUser.sendEmailVerification();
-        // sweetAlert("success", "successfully, please check your email")
-        alert("successfully, please check your email");
+        sweetAlert("success", "successfully, please check your email")
       })
       .catch((error) => {
         var errorMessage = error.message;
-        // sweetAlert("error",errorMessage )
-        alert(errorMessage);
+        sweetAlert("error",errorMessage )
+        
       });
   };
 

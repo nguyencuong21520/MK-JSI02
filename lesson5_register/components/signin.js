@@ -2,6 +2,7 @@ import { InputGroup } from "./inputGroup.js";
 import { Register } from "./register.js";
 import { setScreen } from "../app.js";
 import { Chat } from "./chat.js";
+import { sweetAlert } from "./b.js";
 
 class Login {
   constructor() {
@@ -34,7 +35,7 @@ class Login {
     this.linkToRegister = document.createElement("p");
     this.linkToRegister.innerHTML = "You dont have an account?";
     this.linkToRegister.classList.add("btn_link");
-    this.linkToRegister.addEventListener("click", this.moveToRegister)
+    this.linkToRegister.addEventListener("click", this.moveToRegister);
   }
   moveToRegister = () => {
     const register = new Register();
@@ -58,18 +59,26 @@ class Login {
       this.inputGroupPassword.setError("password is required");
     }
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Signed in
-      var user = userCredential.user;
-      // ...
-      const chat = new Chat();
-      setScreen(chat)
-    })
-    .catch((error) => {
-      var errorMessage = error.message;
-      alert(errorMessage)
-    });
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        // ...
+        if(user.emailVerified){
+         open("./chat.html", "_self")
+        }else{
+          sweetAlert('error', 'please verify email')
+        }
+        
+        // const chat = new Chat();
+        // setScreen(chat);
+      })
+      .catch((error) => {
+        var errorMessage = error.message;
+        sweetAlert("error", errorMessage);
+      });
   };
 
   render() {

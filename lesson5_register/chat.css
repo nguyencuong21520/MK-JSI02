@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:whitesmoke
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.form_signUp_wrapper{
+    background-color:white;
+    width: 65%;
+    height:600px;
+    border-radius:25px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+}
+.form_signUp_input_wrapper input{
+    display: block;
+}
+.form_signUp_wrapper .row{
+    height:100%
+}
+.form_signUp_wrapper .right, .form_signUp_wrapper .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%
+}
+.form_signUp_wrapper .right h1{
+    margin-bottom: 70px;
+}
+.form_signUp_wrapper .right input:not(.form-check){
+    padding:10px 15px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+.form_signUp_wrapper .right input.form-check{
+    padding: 0 !important;
+}
+.form_signUp_wrapper .right button{
+    padding: 10px 45px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.form_signUp_wrapper .right button:hover{
+    background-color:whitesmoke;
+}
+.text-error{
+    color:red;
+}
+.info_chat_container{
+    height:100vh;
+    width: 15%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.125);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+.users_chat_container{
+    height:100vh;
+
+    width: 40%;
+    padding: 10px 15px;
+}
+.title{
+    height: 100px;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    margin-bottom:30px;
+}
+.title h2{
+    line-height:100px;
+    align-items:center;
+    transition: color 0.2s linear;
+}
+.dark .title {
+    color:grey;
+    transition: color 0.2s linear;
+}
+.body_chat_container{
+    height:100vh;
+    width: 65%;
+    padding: 10px 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.125);
+}
+.list-group-item{
+    display: flex;
+    justify-content: space-between;
+    transition: background 0.2s linear;
+}
+
+.list-group-item .time{
+    display: flex;
+    align-items: center;
+}
+
+
+.users_chat_container .list-group{
+    height: 85%;
+    overflow: auto;
+    
+}
+.chat-content-container{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow: auto;
+
+}
+.chat-content{
+    background-color:gray;
+    margin-bottom:10px;
+    max-width: 70%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    align-self: flex-start;
+}
+.chat-content span{
+    word-break: break-word;
+}
+.chat-content-container .owner{
+    background-color: #3498db;
+    align-self: flex-end;
+ 
+}
+.chat{
+    height:85%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chat form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.chat form input{
+    width: 95%;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #3498db;
+    transition:1s;
+
+}
+.chat form input:focus{
+    transition:1s;
+    border-bottom: 2px solid #3498db;
+}
+.chat form button{
+    border: none;
+    border-radius:50%
+}
+
+/* dark and light */
+body {
+	background-color: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	transition: background 0.2s linear;
+}
+
+body.dark {
+	background: #292C35;
+}
+.dark .list-group-item{
+	background: #292C35;
+    color: gray;
+    transition: background 0.2s linear;
+
+}
+
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
