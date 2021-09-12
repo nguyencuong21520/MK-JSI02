@@ -71,9 +71,6 @@ class Login {
         }else{
           sweetAlert('error', 'please verify email')
         }
-        
-        // const chat = new Chat();
-        // setScreen(chat);
       })
       .catch((error) => {
         var errorMessage = error.message;
